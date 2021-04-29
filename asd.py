@@ -89,9 +89,9 @@ def bnr(input_fb, input_fr):  # ★find device-value from BW & Resonant freq.★
     print("BW = ", bbc(res_save, ind_save), " RF = ", rfc(ind_save, cap_save))
 
 
-def bnr_test():  # ★find device-value from BW & Resonant freq.★
-    fb = 2000  # Band Width Feq = 2kHz
-    fr = 3000  # Resonant Freq. = 3kHz
+def bnr_test(input_fb, input_fr):  # ★find device-value from BW & Resonant freq.★
+    fb = input_fb  # Band Width Feq = 2kHz
+    fr = input_fr  # Resonant Freq. = 3kHz
     res_num = len(res_list)
     ind_num = len(ind_list)
     cap_num = len(cap_list)
