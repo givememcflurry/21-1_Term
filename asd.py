@@ -86,7 +86,7 @@ def bnr(input_fb, input_fr):  # ★find device-value from BW & Resonant freq.★
     print("R = ", res_save, "kOhm")
     print("L = ", ind_save, "mH")
     print("C = ", cap_save, "uF")
-    print("BW = ", bbc(res_save, ind_save), " RF = ", rfc(ind_save, cap_save))
+    print("BW = ", round(bbc(res_save, ind_save)), " RF = ", round(rfc(ind_save, cap_save)))
 
 
 def bnr_test(input_fb, input_fr):  # ★find device-value from BW & Resonant freq.★
