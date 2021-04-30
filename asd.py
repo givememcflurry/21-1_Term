@@ -120,6 +120,17 @@ def bnr_test(input_fb, input_fr):  # ★find device-value from BW & Resonant fre
         ic = 0
 
 
+def bnr_test2(unit_fb, unit_fr):  # Consider all of probability
+    cnt = 1
+    std_fb = 2000
+    std_fr = 3000
+    while cnt < 11:
+        input_fb = (unit_fb * cnt) + std_fb
+        input_fr = (unit_fr * cnt) + std_fr
+        bnr(input_fb, input_fr)
+        cnt = cnt + 1
+
+
 def lcc(res, cap):  # LPF Cutoff-Freq. Calculate
     input_res = res * 1e+3
     input_cap = cap * 1e-6
@@ -188,7 +199,7 @@ def fri(input_freq):  # ★Find Res, Ind - HPF★
         rc = rc + 1
         ic = 0
     print("R = ", res_save, "kOhm")
-    print("L = ", ind_save, "uF")
+    print("L = ", ind_save, "mH")
     print("HPF_Fc = ", round(hcc(res_save, ind_save)))
 
 
