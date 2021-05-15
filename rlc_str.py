@@ -1,11 +1,12 @@
 # 2021-1 Device-Value Calculate Module :)
+# Strict device value version
+
 import math as mt
 
 res_list = [0.001, 0.0022, 0.0033, 0.0047, 0.0056, 0.0068, 0.0075, 0.0091, 0.01, 0.022, 0.033, 0.051, 0.082, 0.1, 0.22,
             0.33, 0.47, 0.56, 0.68, 0.82, 1]  # kilo Ohm
 ind_list = [0.22, 0.33, 0.47, 0.56, 0.68, 0.82, 1, 1.2, 1.5, 2.7, 3.3, 4.7, 10, 22, 33, 68]  # milli Henri
-cap_list = [0.033, 0.047, 0.068, 0.1, 0.12, 0.15, 0.18, 0.22, 0.33, 0.47, 0.56, 0.68, 1, 2.2, 3.3, 4.7, 5.6, 6.8, 10,
-            22, 33, 47, 100, 220, 330, 470, 560]  # micro Farad
+cap_list = [0.033, 0.047, 0.068, 0.1, 0.12, 0.15, 0.18, 0.22, 0.33, 0.47, 0.56, 0.68]  # micro Farad
 
 
 def bbc(res, ind):  # BPF BW Calculate
@@ -89,7 +90,7 @@ def bnr(input_fb, input_fr):  # ★find device-value from BW & Resonant freq.★
     print("BW = ", round(bbc(res_save, ind_save)), " RF = ", round(rfc(ind_save, cap_save)))
 
 
-def bnr_test(input_fb, input_fr):  # ★find device-value from BW & Resonant freq.★
+def bnr_test(input_fb, input_fr):
     fb = input_fb  # Band Width Feq = 2kHz
     fr = input_fr  # Resonant Freq. = 3kHz
     res_num = len(res_list)
