@@ -17,6 +17,7 @@ def lpf(ref_mag, mes_mag, phs):
     phs_scr = round(4 - 0.1 * phs_err, 2)
     chk_phs = chk(phs_scr)
 
+    print("Mag Error = ", round(mag_err, 3), "Phs Error = ", round(phs_err, 3))
     print("Mag = ", chk_mag, "Phs = ", chk_phs)
     print("LPF Score = ", round(chk_mag + chk_phs, 2))
 
@@ -30,6 +31,7 @@ def hpf(ref_mag, mes_mag, phs):
     phs_scr = round(4 - 0.1 * phs_err, 2)
     chk_phs = chk(phs_scr)
 
+    print("Mag Error = ", round(mag_err, 3), "Phs Error = ", round(phs_err, 3))
     print("Mag = ", chk_mag, "Phs = ", chk_phs)
     print("HPF Score = ", round(chk_mag + chk_phs, 2))
 
@@ -43,6 +45,7 @@ def brf(ref_mag, mes_mag, phs):
     phs_scr = round(2 - 0.1 * phs_err, 2)
     chk_phs = chk(phs_scr)
 
+    print("Mag Error = ", round(mag_err, 3), "Phs Error = ", round(phs_err, 3))
     print("Mag = ", chk_mag, "Phs = ", chk_phs)
     print("BPF RF Score = ", round(chk_mag + chk_phs, 2))
 
@@ -56,6 +59,7 @@ def bhf(ref_mag, mes_mag, phs):
     phs_scr = round(2 - 0.1 * phs_err, 2)
     chk_phs = chk(phs_scr)
 
+    print("Mag Error = ", round(mag_err, 3), "Phs Error = ", round(phs_err, 3))
     print("Mag = ", chk_mag, "Phs = ", chk_phs)
     print("BPF HF Score = ", round(chk_mag + chk_phs, 2))
 
@@ -69,5 +73,6 @@ def blf(ref_mag, mes_mag, phs):
     phs_scr = round(2 - 0.1 * phs_err, 2)
     chk_phs = chk(phs_scr)
 
+    print("Mag Error = ", round(mag_err, 3), "Phs Error = ", round(phs_err, 3))
     print("Mag = ", chk_mag, "Phs = ", chk_phs)
     print("BPF LF Score = ", round(chk_mag + chk_phs, 2))
